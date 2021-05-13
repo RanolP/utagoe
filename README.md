@@ -11,3 +11,4 @@ utagoe(歌声) is a program about songs
 - Wiki
 - Fully-Customizable Lyrics
 - Karaoke
+- Written in Rust (Powered by tauri and.... Kagura? not sure)
