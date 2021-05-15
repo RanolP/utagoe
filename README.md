@@ -11,4 +11,4 @@ utagoe(歌声) is a program about songs
 - Wiki
 - Fully-Customizable Lyrics
 - Karaoke
-- Lightweight and Fast (Using Tauri and Preact with TypeScript instead of Electron and React)
+- Lightweight and Fast (Using Tauri and Preact instead of Electron and React)
