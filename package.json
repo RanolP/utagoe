@@ -2,8 +2,8 @@
   "name": "utagoe",
   "version": "0.0.0",
   "scripts": {
-    "dev": "concurrently \"vite\" \"tauri dev\" --kill-others",
-    "build": "tsc && vite build && tauri build"
+    "dev": "concurrently \"vite\" \"cargo tauri dev\" --kill-others",
+    "build": "tsc && vite build && cargo tauri build"
   },
   "dependencies": {
     "goober": "^2.0.37",
