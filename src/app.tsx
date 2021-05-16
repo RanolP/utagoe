@@ -1,20 +1,20 @@
-import { Logo } from './logo'
+import { styled } from 'goober';
 
-export function App() {
+const Wrap = styled('div')`
+  height: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  background: #c0ffee;
+
+  h1 {
+    margin: 0;
+  }
+`;
+
+export function App(): JSX.Element {
   return (
-    <>
-      <Logo />
-      <p>Hello Vite + Preact!</p>
-      <p>
-        <a
-          class="link"
-          href="https://preactjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Preact
-        </a>
-      </p>
-    </>
-  )
+    <Wrap>
+      <h1>Hello Utagoe!</h1>
+    </Wrap>
+  );
 }
