@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  publish-tauri:
+  deployment:
     strategy:
       fail-fast: false
       matrix:
@@ -27,7 +27,9 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y webkit2gtk-4.0
-      - name: install app dependencies
-        run: npm install && npm run build
+      - name: install tauri-cli.rs
+        run: cargo install tauri-cli --version ^1.0.0-beta
+      - name: install npm dependencies
+        run: npm install
       - name: build app
-        run: npm install && npm run build
+        run: npm run build
