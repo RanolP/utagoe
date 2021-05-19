@@ -1,6 +1,6 @@
 import { setup } from 'goober';
 import { render } from 'preact';
-import { App } from './app';
+import { App } from './App';
 import './index.css';
 
 // Automatically resolved by vite.
