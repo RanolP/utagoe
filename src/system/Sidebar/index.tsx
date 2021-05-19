@@ -1,5 +1,5 @@
 import { styled } from 'goober';
-import { Link } from 'wouter';
+import { Link } from 'wouter-preact';
 
 const List = styled('ul')`
   margin: 0;

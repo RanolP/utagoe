@@ -9,7 +9,7 @@
     "goober": "^2.0.37",
     "preact": "^10.5.13",
     "unistore": "^3.5.2",
-    "wouter": "^2.7.4"
+    "wouter-preact": "^2.7.4"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.0.0",

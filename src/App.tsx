@@ -1,5 +1,5 @@
 import { styled } from 'goober';
-import { Redirect, Route, Router, Switch, useLocation } from 'wouter';
+import { Redirect, Route, Router, Switch } from 'wouter-preact';
 import { Sidebar } from './system/Sidebar';
 
 const Wrap = styled('div')`
