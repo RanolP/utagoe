@@ -1,5 +1,6 @@
 import { styled } from 'goober';
-import { Link } from 'wouter-preact';
+import { Link, LinkProps } from 'wouter-preact';
+import useLocation from 'wouter-preact/use-location';
 
 const List = styled('ul')`
   margin: 0;
@@ -14,19 +15,31 @@ const List = styled('ul')`
   flex-direction: column;
   justify-content: center;
 
+  background: #aaaaaa;
+
   li {
     padding: 1rem 2rem;
   }
 `;
 
+const LinkStyled = styled<{ highlight?: boolean } & LinkProps>(Link)`
+  ${({ highlight }) => highlight && `font-weight: bold;`}
+`;
+
 export function Sidebar(): JSX.Element {
+  const [location] = useLocation();
+
   return (
     <List>
       <li>
-        <Link href="discover">발견</Link>
+        <LinkStyled highlight={location === '/discover'} href="/discover">
+          발견
+        </LinkStyled>
       </li>
       <li>
-        <Link href="wiki">위키</Link>
+        <LinkStyled highlight={location === '/wiki'} href="/wiki">
+          위키
+        </LinkStyled>
       </li>
     </List>
   );

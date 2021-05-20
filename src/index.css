@@ -4,9 +4,6 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica Neue', arial, sans-serif;
-  font-weight: 400;
-  color: #444;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -17,4 +14,13 @@ body {
 
 #app {
   height: 100%;
+}
+
+a:not(.link) {
+  text-decoration: none;
+  color: unset;
+}
+
+a:not(.link):visited {
+  color: unset;
 }
