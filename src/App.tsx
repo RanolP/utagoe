@@ -1,6 +1,5 @@
 import { styled } from 'goober';
 import { Redirect, Route, Router, Switch } from 'wouter-preact';
-import useLocation from 'wouter-preact/use-location';
 import { DiscoverPage } from './pages/DiscoverPage';
 import { PlayerPage } from './pages/PlayerPage';
 import { Sidebar } from './system/Sidebar';
@@ -15,8 +14,11 @@ const Wrap = styled('div')`
   grid-template-columns: auto 1fr;
 `;
 
+const Main = styled('div')`
+  overflow-y: auto;
+`;
+
 export function App(): JSX.Element {
-  const [loc] = useLocation();
   return (
     <Router>
       <Switch>
@@ -26,15 +28,17 @@ export function App(): JSX.Element {
         <Route>
           <Wrap>
             <Sidebar />
-            <Switch>
-              <Route path="/discover">
-                <DiscoverPage />
-              </Route>
-              <Route path="/wiki">Wikiiii</Route>
-              <Route>
-                <Redirect to="/discover" />
-              </Route>
-            </Switch>
+            <Main>
+              <Switch>
+                <Route path="/discover">
+                  <DiscoverPage />
+                </Route>
+                <Route path="/wiki">Wikiiii</Route>
+                <Route>
+                  <Redirect to="/discover" />
+                </Route>
+              </Switch>
+            </Main>
           </Wrap>
         </Route>
       </Switch>
