@@ -7,6 +7,8 @@ import {
   Spotify,
   Youtube,
 } from '@icons-pack/react-simple-icons';
+import { invoke } from '@tauri-apps/api/tauri';
+import { useCallback, useState } from 'preact/hooks';
 import Select from 'react-select';
 
 type Platform = {
@@ -61,9 +63,18 @@ function formatOptionLabel(props: Platform): JSX.Element {
 }
 
 export function DiscoverPage(): JSX.Element {
+  const [test, setTest] = useState('Get!');
+
+  const run = useCallback(async () => {
+    setTest('waiting...');
+    const res = await invoke<string>('test');
+    setTest(res);
+  }, []);
+
   return (
     <div>
       <h1>Discover</h1>
+      <button onClick={run}>{test}</button>
       <form>
         <Select
           options={Platforms}

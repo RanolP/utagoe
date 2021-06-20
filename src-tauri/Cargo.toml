@@ -18,7 +18,7 @@ tauri-build = { version = "1.0.0-beta.0" }
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
 tauri = { version = "1.0.0-beta.1", features = ["api-all"] }
-sled = "0.34.6"
+libutagoe = { path = "../libutagoe" }
 
 [features]
 default = [ "custom-protocol" ]
