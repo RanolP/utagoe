@@ -1,0 +1,7 @@
+target/
+node_modules/
+dist/
+backup/
+/.idea/
+/.vscode/
+*.log

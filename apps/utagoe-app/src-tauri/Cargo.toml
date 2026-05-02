@@ -1,0 +1,20 @@
+[package]
+name = "utagoe-app"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[lib]
+name = "utagoe_app_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+libutagoe = { path = "../../../crates/libutagoe" }
+saisei = { path = "../../../crates/saisei" }
+serde.workspace = true
+tauri = { version = "2", features = [] }
+utagoe-provider-runtime = { path = "../../../crates/utagoe-provider-runtime" }

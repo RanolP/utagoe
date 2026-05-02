@@ -1,0 +1,15 @@
+[package]
+name = "libutagoe"
+version = "0.1.0"
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+saisei = { path = "../saisei" }
+serde.workspace = true
+thiserror.workspace = true
+utagoe-acquisition = { path = "../utagoe-acquisition" }
+utagoe-provider-runtime = { path = "../utagoe-provider-runtime" }
+wakatta = { path = "../wakatta" }
+uuid.workspace = true
